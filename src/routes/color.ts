@@ -83,7 +83,6 @@ router.get("/is-light", (req, res) => {
   const hex = String(req.query.hex);
   const rgb = hexToRgb(hex);
   if (!rgb) return res.status(400).json({ error: "Invalid hex" });
-  // YIQ formula
   const yiq = (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000;
   res.json({ result: yiq >= 128 });
 });

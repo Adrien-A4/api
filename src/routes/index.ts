@@ -9,6 +9,7 @@ import color from "./color.js";
 import convert from "./convert.js";
 import mock from "./mock.js";
 import encode from "./encode.js";
+import ai from "./ai.js";
 
 const router = Router();
 
@@ -22,5 +23,5 @@ router.use("/color", color);
 router.use("/convert", convert);
 router.use("/mock", mock);
 router.use("/encode", encode);
-
+router.use("/ai", ai);
 export default router;
